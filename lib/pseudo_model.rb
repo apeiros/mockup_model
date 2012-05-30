@@ -9,7 +9,8 @@ require 'pseudo_model/version'
 # PseudoModel
 # A class that pretends to be an active record model, useful for mockups.
 class PseudoModel
-  (Object.instance_methods - Object.instance_methods.grep(/^__/) - %w[object_id respond_to? hash eql? equal? == send class inspect is_a? to_yaml].map{|n|[n,n.to_sym]}.flatten).each do |m|
+  rails_methods = %w[object_id respond_to? hash eql? equal? == send class inspect is_a? kind_of? to_yaml].map{|n|[n,n.to_sym]}.flatten
+  (Object.instance_methods - Object.instance_methods.grep(/^__/) - rails_methods).each do |m|
     undef_method m
   end
 
