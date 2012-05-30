@@ -20,6 +20,14 @@ class PseudoModel
     self
   end
 
+  def to_key
+    [self.id]
+  end
+
+  def to_param
+    self.id
+  end
+
   def valid?()      true end
   def new_record?() true end
   def destroyed?()  true end
