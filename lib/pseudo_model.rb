@@ -86,4 +86,10 @@ class PseudoModel
   def save!
     true
   end
+
+  def inspect
+    sprintf "\#<%s %s>",
+            self.class.name,
+            @attributes.map { |pair| "%s=%p" % pair }.join(" ")
+  end
 end
