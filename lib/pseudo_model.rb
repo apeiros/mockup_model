@@ -2,6 +2,8 @@
 
 
 
+require 'active_model/naming'
+require 'active_support/hash_with_indifferent_access'
 require 'pseudo_model/version'
 
 
