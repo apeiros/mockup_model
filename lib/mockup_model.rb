@@ -4,13 +4,13 @@
 
 require 'active_model/naming'
 require 'active_support/hash_with_indifferent_access'
-require 'pseudo_model/version'
+require 'mockup_model/version'
 
 
 
-# PseudoModel
+# MockupModel
 # A class that pretends to be an active record model, useful for mockups.
-class PseudoModel
+class MockupModel
   rails_methods = %w[object_id respond_to? hash eql? equal? == send class inspect is_a? kind_of? to_yaml].map{|n|[n,n.to_sym]}.flatten
   (Object.instance_methods - Object.instance_methods.grep(/^__/) - rails_methods).each do |m|
     undef_method m

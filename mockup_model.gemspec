@@ -1,11 +1,11 @@
 # encoding: utf-8
 
 Gem::Specification.new do |s|
-  s.name                      = "pseudo_model"
+  s.name                      = "mockup_model"
   s.version                   = "0.0.1"
   s.authors                   = ["Stefan Rusterholz", "Swiss Life Select Schweiz"]
   s.email                     = "stefan.rusterholz@gmail.com"
-  s.homepage                  = "https://github.com/apeiros/pseudo_model"
+  s.homepage                  = "https://github.com/apeiros/mockup_model"
 
   s.description               = <<-DESCRIPTION.gsub(/^    /, '').chomp
     A class that pretends to be an active record model, useful for mockups.

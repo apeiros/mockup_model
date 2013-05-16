@@ -9,7 +9,7 @@ A class that pretends to be an active record model, useful for mockups.
 
 Installation
 ------------
-`gem install pseudo_model`
+`gem install mockup_model`
 
 
 Usage
